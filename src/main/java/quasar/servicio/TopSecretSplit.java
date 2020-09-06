@@ -55,20 +55,20 @@ public class TopSecretSplit {
 
 			// Guarda la información de los mensajes enviados
 			List<String[]> mensajesProcesar = new ArrayList<>();
-			int tamañoMaximoMensaje = 0;
+			int tamanoMaximoMensaje = 0;
 			Set<String> listaLlavesMensaje = UnificadorInformacion.getInstance().getMensajeSatelite().keySet();
 			for (String iteraLLaveMensaje : listaLlavesMensaje) {
 
 				String[] mensaje = UnificadorInformacion.getInstance().getMensajeSatelite().get(iteraLLaveMensaje);
-				int tamañoMensaje = mensaje.length;
-				if (tamañoMaximoMensaje < tamañoMensaje) {
-					tamañoMaximoMensaje = tamañoMensaje;
+				int tamanoMensaje = mensaje.length;
+				if (tamanoMaximoMensaje < tamanoMensaje) {
+					tamanoMaximoMensaje = tamanoMensaje;
 				}
 
 				mensajesProcesar.add(mensaje);
 			}
 
-			String mensajeDesencriptado = Desencriptor.getMensaje(mensajesProcesar, tamañoMaximoMensaje);
+			String mensajeDesencriptado = Desencriptor.getMensaje(mensajesProcesar, tamanoMaximoMensaje);
 			PosicionDTO posicion = Ubicador.getUbicacion(UnificadorInformacion.getInstance().getDistanciaSatelites());
 			RespuestaDTO respuesta = new RespuestaDTO(mensajeDesencriptado, posicion);
 
@@ -87,20 +87,20 @@ public class TopSecretSplit {
 
 			// Guarda la información de los mensajes enviados
 			List<String[]> mensajesProcesar = new ArrayList<>();
-			int tamañoMaximoMensaje = 0;
+			int tamanoMaximoMensaje = 0;
 			Set<String> listaLlavesMensaje = UnificadorInformacion.getInstance().getMensajeSatelite().keySet();
 			for (String iteraLLaveMensaje : listaLlavesMensaje) {
 
 				String[] mensaje = UnificadorInformacion.getInstance().getMensajeSatelite().get(iteraLLaveMensaje);
-				int tamañoMensaje = mensaje.length;
-				if (tamañoMaximoMensaje < tamañoMensaje) {
-					tamañoMaximoMensaje = tamañoMensaje;
+				int tamanoMensaje = mensaje.length;
+				if (tamanoMaximoMensaje < tamanoMensaje) {
+					tamanoMaximoMensaje = tamanoMensaje;
 				}
 
 				mensajesProcesar.add(mensaje);
 			}
 
-			String mensajeDesencriptado = Desencriptor.getMensaje(mensajesProcesar, tamañoMaximoMensaje);
+			String mensajeDesencriptado = Desencriptor.getMensaje(mensajesProcesar, tamanoMaximoMensaje);
 			PosicionDTO posicion = Ubicador.getUbicacion(UnificadorInformacion.getInstance().getDistanciaSatelites());
 			RespuestaDTO respuesta = new RespuestaDTO(mensajeDesencriptado, posicion);
 

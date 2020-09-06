@@ -40,14 +40,14 @@ public class TopSecret {
 			List<MensajeSateliteDTO> satelitesProcesar = listaSatelites.getSatelites();
 			//Guarda la información de los mensajes enviados
 			List<String[]> mensajesProcesar = new ArrayList<>();
-			int tamañoMaximoMensaje = 0;
+			int tamanoMaximoMensaje = 0;
 			//Guarda la información de las ubicaciones
 			Map<String,Double> distanciasSatelites = new HashMap();
 			for(MensajeSateliteDTO iteraMensaje: satelitesProcesar) {
 			
-				int tamañoMensaje = iteraMensaje.getMessage().length;
-				if(tamañoMaximoMensaje < tamañoMensaje) {
-					tamañoMaximoMensaje = tamañoMensaje;
+				int tamanoMensaje = iteraMensaje.getMessage().length;
+				if(tamanoMaximoMensaje < tamanoMensaje) {
+					tamanoMaximoMensaje = tamanoMensaje;
 				}
 				
 				distanciasSatelites.put(iteraMensaje.getName(), iteraMensaje.getDistance());
@@ -55,7 +55,7 @@ public class TopSecret {
 				mensajesProcesar.add(iteraMensaje.getMessage());
 			}
 			
-			String mensajeDesencriptado = Desencriptor.getMensaje(mensajesProcesar, tamañoMaximoMensaje);
+			String mensajeDesencriptado = Desencriptor.getMensaje(mensajesProcesar, tamanoMaximoMensaje);
 			PosicionDTO posicion = Ubicador.getUbicacion(distanciasSatelites);
 			RespuestaDTO respuesta = new RespuestaDTO(mensajeDesencriptado, posicion);
 

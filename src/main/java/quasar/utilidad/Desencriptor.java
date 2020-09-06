@@ -13,17 +13,17 @@ public class Desencriptor {
 	 * Metodo encargado de desencriptar el mensaje enviado a los satelites de Quasar, se encarga de recorrer los diferentes
 	 * mensajes enviados a los satelites y concatenar el mensaje	 * 
 	 * @param mensajes Lista de array con el contenido de los mensajes
-	 * @param tamañoMaximo Indica el tamaño del array mas grande de la lista de mensajes 
+	 * @param tamanoMaximo Indica el tamano del array mas grande de la lista de mensajes 
 	 * @return mensaje desencriptado
 	 * @throws QuasarException indica:
 	 * MENSAJE_NO_DECODIFICADO_EXCEPTION -> El mensaje tenia información incompleta
 	 * DESENCRIPTADOR_EXCEPTION -> Error generar en el proceso de desencriptado
 	 */
-	public static String getMensaje(List<String[]> mensajes, int tamañoMaximo) throws QuasarException {
+	public static String getMensaje(List<String[]> mensajes, int tamanoMaximo) throws QuasarException {
 
 		try {
 
-			String[] mensaje = new String[tamañoMaximo];
+			String[] mensaje = new String[tamanoMaximo];
 
 			for (String[] iteraMensaje : mensajes) {
 
