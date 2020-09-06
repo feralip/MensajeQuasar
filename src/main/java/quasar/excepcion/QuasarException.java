@@ -1,5 +1,8 @@
 package quasar.excepcion;
 
+/**
+ * Clase encargada del manejo de las excepciones del programa
+ */
 public class QuasarException extends Exception {
 	
 	public static final int DESENCRIPTADOR_EXCEPTION = 1;

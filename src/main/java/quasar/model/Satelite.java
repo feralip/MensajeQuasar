@@ -1,7 +1,8 @@
 package quasar.model;
 
-import java.util.List;
-
+/**
+ * Clase encargada de la información general de los satelites, como ubicación y nombres
+ */
 public class Satelite {
 
 	public static final double[] UBICACION_KENOBI = { -500, 200 };

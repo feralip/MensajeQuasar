@@ -16,7 +16,9 @@ import quasar.model.Satelite;
 
 class TestUbicador {
 	
-
+	/**
+	 * Caso de prueba para validar cuando la información de las distancias son incorrectas
+	 */
 	@Test
 	void distanciaIncorrecta() {
 		
@@ -42,6 +44,9 @@ class TestUbicador {
 		assertEquals(response.getBody(), "Error, no se puede calcular el origen del mensaje.");
 	}
 	
+	/**
+	 * Caso de prueba para validar cuando la lista de satelites enviados es incorrecta
+	 */
 	@Test
 	void satelitesIncompletos() {
 		
@@ -68,7 +73,9 @@ class TestUbicador {
 		assertEquals(response.getBody(), "Error, no se pudo decodificar el mensaje.");
 	}
 	
-	
+	/**
+	 * Caso de prueba validar la información exitosa
+	 */
 	@Test
 	void distanciaCorrecta() {
 		
